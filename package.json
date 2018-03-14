@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-ng-template-url-absolutify",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "ViES <vies@list.ru>",
   "license": "MIT",
   "description": "Transform AngularJS templateUrl relative paths to absolute URLs.",
