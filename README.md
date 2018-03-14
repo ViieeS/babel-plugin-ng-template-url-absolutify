@@ -16,14 +16,12 @@ Add the transform in package.json:
 
 #### Babel
 ```json
-{  
-  // ...
-  
+{
   "babel": {
       "presets": ["env"],
       "extensions": [".es6"],
       "plugins": [
-        ["babel-plugin-ng-template-url-absolutify", {"baseDir": "./app", baseUrl: "http://mysite.com/"}]
+        ["babel-plugin-ng-template-url-absolutify", {"baseDir": "./app", "baseUrl": "http://mysite.com/"}]
       ]
   }
   
@@ -32,8 +30,7 @@ Add the transform in package.json:
 
 #### Browserify with Babelify
 ```json
-{  
-  // ...
+{
   "browserify": {
     "transform": [
       ["babelify", {
