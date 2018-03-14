@@ -1,7 +1,13 @@
 {
   "name": "ng-template-url-absolutify",
   "version": "0.1.0",
+  "author": "ViES <vies@list.ru>",
+  "license": "MIT",
   "description": "Transform AngularJS templateUrl paths to absolute URLs.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ViieeS/ng-template-url-absolutify.git"
+  },
   "main": "lib/index.js",
   "directories": {
     "lib": "lib"
@@ -10,8 +16,6 @@
     "build": "babel src --presets babel-preset-es2015 --out-dir lib",
     "prepublish": "npm run build"
   },
-  "author": "ViES <vies@list.ru>",
-  "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-es2015": "^6.24.1"
