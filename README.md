@@ -15,7 +15,7 @@ Use in either package.json or with gulp:
 Add the transform in package.json:
 
 #### Babel
-```js
+```json
 {  
   // ...
   
@@ -23,7 +23,7 @@ Add the transform in package.json:
       "presets": ["env"],
       "extensions": [".es6"],
       "plugins": [
-        ["babel-plugin-ng-template-url-absolutify", {baseDir: "./app", baseUrl: "http://mysite.com/"}]
+        ["babel-plugin-ng-template-url-absolutify", {"baseDir": "./app", baseUrl: "http://mysite.com/"}]
       ]
   }
   
@@ -31,7 +31,7 @@ Add the transform in package.json:
 ```
 
 #### Browserify with Babelify
-```js
+```json
 {  
   // ...
   "browserify": {
@@ -40,7 +40,7 @@ Add the transform in package.json:
           "presets": ["env"],
           "extensions": [".es6"],
           "plugins": [
-            ["babel-plugin-ng-template-url-absolutify", {baseDir: "./app", baseUrl: "http://mysite.com/"}]
+            ["babel-plugin-ng-template-url-absolutify", {"baseDir": "./app", "baseUrl": "http://mysite.com/"}]
           ]
         }
       ]
