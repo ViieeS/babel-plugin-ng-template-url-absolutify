@@ -1,9 +1,9 @@
-# ng-template-url-absolutify
+# babel-plugin-ng-template-url-absolutify
 
-Transform AngularJS templateUrl paths to absolute URLs.
+Transform AngularJS templateUrl relative paths to absolute URLs.
 
 ```
-$ npm install ng-template-url-absolutify --save-dev
+$ npm install babel-plugin-ng-template-url-absolutify --save-dev
 ```
 
 ## Usage
@@ -13,6 +13,24 @@ Use in either package.json or with gulp:
 ### a) Package.json
 
 Add the transform in package.json:
+
+#### Babel
+```js
+{  
+  // ...
+  
+  "babel": {
+      "presets": ["env"],
+      "extensions": [".es6"],
+      "plugins": [
+        ["babel-plugin-ng-template-url-absolutify", {baseDir: "./app", baseUrl: "http://mysite.com/"}]
+      ]
+  }
+  
+}
+```
+
+#### Browserify with Babelify
 ```js
 {  
   // ...
@@ -22,7 +40,7 @@ Add the transform in package.json:
           "presets": ["env"],
           "extensions": [".es6"],
           "plugins": [
-            ["ng-template-url-absolutify", {baseDir: "./app", baseUrl: "http://mysite.com/"}]
+            ["babel-plugin-ng-template-url-absolutify", {baseDir: "./app", baseUrl: "http://mysite.com/"}]
           ]
         }
       ]
@@ -31,7 +49,7 @@ Add the transform in package.json:
 }
 ```
 
-### b) With Gulp and browserify
+### b) With Gulp + Browserify with Babelify
 
 Add it to the babelify object and specify a `baseDir` and `baseUrl`.
 
@@ -45,7 +63,7 @@ gulp.task('scripts', function() {
                 presets: ["env"],
                 extensions: [".es6"],
                 plugins: [[
-                  "ng-template-url-absolutify",
+                  "babel-plugin-ng-template-url-absolutify",
                   {baseDir: "./app", baseUrl: "http://mysite.com/"}
                 ]]
             })

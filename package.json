@@ -1,12 +1,12 @@
 {
-  "name": "ng-template-url-absolutify",
+  "name": "babel-plugin-ng-template-url-absolutify",
   "version": "0.1.0",
   "author": "ViES <vies@list.ru>",
   "license": "MIT",
-  "description": "Transform AngularJS templateUrl paths to absolute URLs.",
+  "description": "Transform AngularJS templateUrl relative paths to absolute URLs.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ViieeS/ng-template-url-absolutify.git"
+    "url": "https://github.com/ViieeS/babel-plugin-ng-template-url-absolutify.git"
   },
   "main": "lib/index.js",
   "directories": {
